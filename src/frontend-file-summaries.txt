@@ -1,0 +1,7 @@
+{
+  "frontend/src/index.css": "Global styles with warm neutral OKLCH color system (earthy browns/tans), smooth scrolling, and typography configuration for a professional document services aesthetic.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with warm neutral color tokens, custom shadows, Inter font family, and consistent spacing for professional business design.",
+  "frontend/src/App.tsx": "Single-page business website with sticky header navigation, hero section with shop board banner image, services cards, about section, location with maps link, contact section, live URL display in footer, and caffeine.ai attribution.",
+  "frontend/src/lib/assetPaths.ts": "Helper function to build base-path aware URLs for static assets using Vite's BASE_URL to ensure correct resolution across deployments.",
+  "frontend/src/components/LiveUrlFooter.tsx": "Footer widget that displays the current site origin with a copy-to-clipboard button and success confirmation message."
+}

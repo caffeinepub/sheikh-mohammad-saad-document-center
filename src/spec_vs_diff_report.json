@@ -1,0 +1,43 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-12T12:17:21.627Z",
+  "summary": "Implemented a new footer widget to display/copy the live site origin and introduced a base-path-aware helper for static asset URLs, updating App.tsx to use it for header logo and hero banner. Deployment/live-URL output and footer logo asset-path fix are not evidenced in the provided diff summary.",
+  "missing_requirements": [
+    {
+      "id": "REQ-11",
+      "requirement": "Redeploy the website and provide the final working live URL as part of the deployment output/instructions.",
+      "reason": "The diff only shows code changes; there is no evidence of any deployment being triggered or any copy/paste-ready final live URL being produced in output/instructions.",
+      "evidence": [
+        "<file-diff>: no deployment/output files shown"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "requirement": "Make static asset URLs (shop-board logo and banner) robust to different deployment base paths (including footer logo).",
+      "reason": "App.tsx is updated to use base-path-aware URLs for the header logo and hero banner, but the diff excerpt does not show any footer logo image reference being updated to use the same helper, so the footer-logo 404 fix cannot be confirmed from the provided evidence.",
+      "evidence": [
+        "frontend/src/App.tsx (truncated)",
+        "frontend/src/lib/assetPaths.ts"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Project metadata/documentation updates not explicitly requested (frontend-file-summaries.txt, project_state.json modifications).",
+      "reason": "The BuildRequest focuses on live URL discoverability and asset paths; updating these metadata/summary files is not part of the stated requirements.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "project_state.json"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/App.tsx",
+    "frontend/src/components/LiveUrlFooter.tsx",
+    "frontend/src/lib/assetPaths.ts",
+    "project_state.json"
+  ]
+}

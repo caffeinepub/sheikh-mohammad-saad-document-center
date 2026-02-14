@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build a professional business website for Sheikh Mohammad Saad Document Center including business details, services, and contact information.",
+  "architectural_notes": [
+    "Support using a user-supplied shop board photo as the primary logo and/or hero/banner image instead of (or in addition to) generated assets."
+  ],
+  "known_issues": [
+    "Deployed/live website URL is not opening; user requests redeploy and a working final live URL."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-professional-single-page-business-website-in-english-for-sheikh-mohammad-saad-document-center-that-clearly-presents-the-business-name-and-a-prominent-headline-suitable-for-a-document-services-center",
+      "title": "Create a professional, single-page business website in English for “Sheikh Mohammad Saad Document Center” that clearly presents the business name and a prominent headline suitable for a document services center.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-about-section-that-displays-the-owner-name-exactly-as-owner-sheikh-mohammad-salman",
+      "title": "Add an “About” section that displays the owner name exactly as: “Owner: Sheikh Mohammad Salman”.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-services-section-listing-the-offered-services-exactly-and-clearly-online-forms-for-pan-aadhaar-and-voter-id",
+      "title": "Add a “Services” section listing the offered services exactly and clearly: Online Forms for PAN, Aadhaar, and Voter ID.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-visit-us-location-section-that-displays-the-full-office-address-exactly-as-provided-and-include-a-safe-outbound-link-to-open-the-address-in-a-map-website-link-only-no-embedded-map-gps-features-required",
+      "title": "Add a “Visit Us” / “Location” section that displays the full office address exactly as provided, and include a safe outbound link to open the address in a map website (link only; no embedded map/GPS features required).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-section-that-displays-the-phone-number-and-email-exactly-as-provided-with-clickable-actions-tel-and-mailto",
+      "title": "Add a “Contact” section that displays the phone number and email exactly as provided, with clickable actions (tel: and mailto:).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-consistent-professional-visual-theme-for-the-site-colors-typography-spacing-and-section-layout-appropriate-for-a-local-document-services-business-avoid-a-blue-purple-dominant-palette",
+      "title": "Create a consistent, professional visual theme for the site (colors, typography, spacing, and section layout) appropriate for a local document services business; avoid a blue/purple-dominant palette.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-simple-top-navigation-or-sticky-header-with-anchor-links-that-smoothly-scroll-to-home-services-about-location-contact-include-a-footer-repeating-the-business-name-and-contact-details",
+      "title": "Add a simple top navigation (or sticky header) with anchor links that smoothly scroll to: Home, Services, About, Location, Contact; include a footer repeating the business name and contact details.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-static-images-logo-and-hero-banner-from-frontend-public-assets-generated-and-use-them-on-the-site-logo-in-header-footer-banner-hero-visual-in-the-hero-section",
+      "title": "Render the generated static images (logo and hero/banner) from frontend/public/assets/generated and use them on the site (logo in header/footer; banner/hero visual in the hero section).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-user-provided-shop-board-photo-to-the-frontend-as-static-image-assets-and-prepare-two-optimized-variants-one-wide-banner-image-and-one-square-logo-crop-both-suitable-for-high-quality-display-on-the-site",
+      "title": "Add the user-provided shop board photo to the frontend as static image assets and prepare two optimized variants: one wide banner image and one square logo crop, both suitable for high-quality display on the site.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-website-ui-to-use-the-shop-board-photo-variants-as-the-primary-branding-visuals-use-the-square-crop-in-the-header-and-footer-in-place-of-the-current-generated-logo-and-use-the-wide-crop-as-the-hero-background-banner-in-place-of-the-current-generated-hero-image",
+      "title": "Update the website UI to use the shop board photo variants as the primary branding visuals: use the square crop in the header and footer in place of the current generated logo, and use the wide crop as the hero background/banner in place of the current generated hero image.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-small-live-url-display-in-the-site-footer-that-shows-the-current-site-origin-e-g-https-with-a-copy-to-clipboard-button-so-the-user-can-retrieve-the-correct-live-url-directly-from-the-deployed-site",
+      "title": "Add a small \"Live URL\" display in the site footer that shows the current site origin (e.g., https://... ) with a copy-to-clipboard button so the user can retrieve the correct live URL directly from the deployed site.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-static-asset-urls-shop-board-logo-and-banner-robust-to-different-deployment-base-paths-by-avoiding-hard-coded-absolute-paths-that-can-break-when-the-app-is-not-served-from-domain-root",
+      "title": "Make static asset URLs (shop-board logo and banner) robust to different deployment base paths by avoiding hard-coded absolute paths that can break when the app is not served from domain root.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a professional business website for Sheikh Mohammad Saad Document Center (owner Sheikh Mohammad Salman) showcasing services (online forms for PAN, Aadhaar, Voter ID) and displaying office address and contact details (phone/email).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Use the user-provided shop board photo as the primary branding visual (main logo and/or hero/banner image) on the website.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Redeploy the website and provide the final working live URL as part of the deployment output/instructions.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Sheikh Mohammad Saad Document Center",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

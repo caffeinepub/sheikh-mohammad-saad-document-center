@@ -1,0 +1,16 @@
+{
+  "backend/main.mo": "Empty Motoko actor placeholder for backend canister.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features to source files and components.",
+  "frontend-file-summaries.txt": "Text file containing prewritten summaries of key frontend source files.",
+  "frontend/index.css": "Tailwind base-layer CSS defining color tokens, dark mode variables, and global element styling.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Main React app with navigation, hero banner, sections, static assets via getAssetPath, and footer with live URL.",
+  "frontend/src/components/LiveUrlFooter.tsx": "React footer component displaying the site origin with a clipboard copy button and success indicator.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages backend actors based on Internet Identity authentication state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Authentication context and provider for managing Internet Identity login, identity state, and AuthClient setup.",
+  "frontend/src/index.css": "Tailwind-based global stylesheet with warm neutral color palette, typography, and scrolling behavior.",
+  "frontend/src/lib/assetPaths.ts": "Utility for constructing BASE_URL‑aware static asset paths to support varied deployment locations.",
+  "frontend/src/main.tsx": "App entry script initializing React, React Query, Internet Identity provider, and global styles.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, container settings, animations, fonts, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Defines the project’s current state, requirements, features, known issues, and architectural notes for building and fixing the business website."
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-small-live-url-display-in-the-site-footer-that-shows-the-current-site-origin-e-g-https-with-a-copy-to-clipboard-button-so-the-user-can-retrieve-the-correct-live-url-directly-from-the-deployed-site",
+      "featureTitle": "Add a small \"Live URL\" display in the site footer that shows the current site origin (e.g., https://... ) with a copy-to-clipboard button so the user can retrieve the correct live URL directly from the deployed site.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LiveUrlFooter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-make-static-asset-urls-shop-board-logo-and-banner-robust-to-different-deployment-base-paths-by-avoiding-hard-coded-absolute-paths-that-can-break-when-the-app-is-not-served-from-domain-root",
+      "featureTitle": "Make static asset URLs (shop-board logo and banner) robust to different deployment base paths by avoiding hard-coded absolute paths that can break when the app is not served from domain root.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/lib/assetPaths.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
