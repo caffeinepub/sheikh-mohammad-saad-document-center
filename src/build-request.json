@@ -1,72 +1,33 @@
 {
   "kind": "build_request",
-  "title": "Redeploy site and make live URL discoverable + fix potential asset path issues",
-  "priority": "high",
+  "title": "Add welcome message below the main shop title on the home (hero) section",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-11",
-      "text": "Redeploy the website and provide the final working live URL as part of the deployment output/instructions.",
-      "target": "unknown",
-      "source": {
-        "messageIds": [
-          "msg-user-1"
-        ],
-        "quotes": [
-          "The previous link is not opening. Please redeploy my site now and give me the final live URL."
-        ]
-      },
-      "acceptanceCriteria": [
-        "A fresh deployment is triggered.",
-        "A single final live URL is produced and shared back (copy/paste ready).",
-        "Opening the final live URL in a new browser session loads the site successfully (no blank page / no generic error)."
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "text": "Add a small \"Live URL\" display in the site footer that shows the current site origin (e.g., https://... ) with a copy-to-clipboard button so the user can retrieve the correct live URL directly from the deployed site.",
+      "id": "REQ-1",
+      "text": "Update the Home (Hero) section on the homepage to display the provided welcome message directly below the main shop title \"Sheikh Mohammad Saad Document Center\" and above the existing subtitle/tagline.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-1"
+          "msg-6"
         ],
         "quotes": [
-          "Please redeploy my site now and give me the final live URL."
+          "Please update the home page with this Welcome Message:\nSheikh Mohammad Saad Document Center mein aapka swagat hai! 📄✨\n​Hum Bawana mein aapki sabhi online aur sarkari document sambandhi zarurato ko poora karne ke liye pratibaddh hain. Chahe wo naya Aadhaar update ho, PAN card, ya Ayushman card—hum har kaam poori zimmedari aur tezi se karte hain.\n​Hamara maksad hai aapka samay bachana aur aapko behtar sevayein dena. Aaj hi hamari services dekhein ya humse sampark karein!\nAlso, make sure it is placed right below the main shop title."
         ]
       },
       "acceptanceCriteria": [
-        "The footer renders a label \"Live URL\" and displays the value derived from the browser location origin.",
-        "A \"Copy\" control copies the URL to clipboard and provides a simple success confirmation message (English).",
-        "The feature does not require login and works on desktop and mobile widths."
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "text": "Make static asset URLs (shop-board logo and banner) robust to different deployment base paths by avoiding hard-coded absolute paths that can break when the app is not served from domain root.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-1"
-        ],
-        "quotes": [
-          "The previous link is not opening."
-        ]
-      },
-      "acceptanceCriteria": [
-        "Header logo and hero banner images load correctly on the deployed site (no 404s).",
-        "Footer logo image loads correctly on the deployed site (no 404s).",
-        "No other site content/regressions are introduced (navigation/sections still render and smooth scroll works)."
+        "On the home page (Hero section), the welcome message appears immediately after the main H1 shop title and before the existing line \"Your trusted partner for professional document services in Delhi\".",
+        "The welcome message text matches the user-provided message exactly (including punctuation, emojis, and line breaks/paragraphs where applicable).",
+        "The welcome message is readable and visually consistent with the current design (centered in the hero content block and responsive on mobile and desktop)."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/components/ui (read-only).",
-    "Do not modify frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx (immutable paths).",
-    "Backend must remain a single Motoko actor in backend/main.mo; add migration.mo only if persistent state upgrades are required (not expected for this change)."
+    "Do not modify any files under frontend/src/components/ui or any other frontend immutablePaths listed in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Adding custom domains or external DNS configuration.",
-    "Adding a backend API just to report the deployment URL.",
-    "Implementing real-time monitoring or uptime checks."
+    "Do not change backend (Motoko) code or add new backend features.",
+    "Do not change navigation, services, about, location, or contact content besides inserting the welcome message in the hero section."
   ],
   "imageRequirements": {
     "required": [],

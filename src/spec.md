@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Redeploy the site, make the correct live URL easy to retrieve, and prevent static asset paths from breaking across deployment base paths.
+**Goal:** Add the provided welcome message to the homepage Hero section directly under the main shop title.
 
 **Planned changes:**
-- Trigger a fresh deployment and provide the final working live URL as part of the deployment output/instructions.
-- Add a footer “Live URL” display that shows the current browser origin with a copy-to-clipboard control and simple success confirmation.
-- Update header/hero/footer image references (shop-board logo and banner) to avoid hard-coded absolute paths so assets load correctly when not served from the domain root.
+- Update the Home (Hero) section layout so the welcome message appears immediately below the main H1 title “Sheikh Mohammad Saad Document Center” and above the existing subtitle/tagline.
+- Insert the welcome message exactly as provided (including emojis, punctuation, and line breaks/paragraphs), ensuring it remains centered and responsive across mobile and desktop.
 
-**User-visible outcome:** The site loads successfully at a single provided live URL, and the deployed site footer shows the current live URL with a one-tap/click copy button; logos/banners reliably load without 404s.
+**User-visible outcome:** Visitors to the homepage will see the full welcome message displayed under the main shop title in the Hero section, before the existing tagline.

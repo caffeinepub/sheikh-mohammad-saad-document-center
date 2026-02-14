@@ -1,63 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Make live URL discoverable in UI and harden static asset paths",
+  "title": "Insert welcome message into homepage hero section",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Document redeploy flow and instruct how to retrieve the final live URL from the deployed site.",
+      "id": "REQ-1",
+      "summary": "Display the provided multi-paragraph welcome message directly under the main hero title and above the existing subtitle/tagline on the homepage.",
       "acceptanceCriteria": [
-        "A fresh deployment is triggered.",
-        "A single final live URL is produced and shared back (copy/paste ready).",
-        "Opening the final live URL in a new browser session loads the site successfully (no blank page / no generic error)."
+        "On the home page (Hero section), the welcome message appears immediately after the main H1 shop title and before the existing line \"Your trusted partner for professional document services in Delhi\".",
+        "The welcome message text matches the user-provided message exactly (including punctuation, emojis, and line breaks/paragraphs where applicable).",
+        "The welcome message is readable and visually consistent with the current design (centered in the hero content block and responsive on mobile and desktop)."
       ],
       "file_operations": [
-        {
-          "path": "frontend/DEPLOYMENT.md",
-          "operation": "create",
-          "description": "Add redeploy instructions (using the repo’s existing deployment tooling) and explicitly note that the deployed site itself shows a copyable Live URL in the footer (REQ-12) to obtain the final live URL. Include brief troubleshooting for blank page/404 scenarios related to base paths and static assets."
-        }
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "summary": "Show the current site origin in the footer with a copy-to-clipboard control and success confirmation.",
-      "acceptanceCriteria": [
-        "The footer renders a label \"Live URL\" and displays the value derived from the browser location origin.",
-        "A \"Copy\" control copies the URL to clipboard and provides a simple success confirmation message (English).",
-        "The feature does not require login and works on desktop and mobile widths."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/LiveUrlFooter.tsx",
-          "operation": "create",
-          "description": "Create a small footer widget that reads the current origin from the browser location, renders a “Live URL” label, and provides a copy-to-clipboard button with a simple success message. If using shadcn-ui components (e.g., Button), verify the component's usage instructions before implementing."
-        },
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Wire the new LiveUrlFooter into the existing footer (no new routes). Place it in the footer layout so it is visible on desktop and mobile. If using shadcn-ui components in the footer, verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "summary": "Make header/hero/footer image src paths base-path aware to prevent 404s when not hosted at domain root.",
-      "acceptanceCriteria": [
-        "Header logo and hero banner images load correctly on the deployed site (no 404s).",
-        "Footer logo image loads correctly on the deployed site (no 404s).",
-        "No other site content/regressions are introduced (navigation/sections still render and smooth scroll works)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/lib/assetPaths.ts",
-          "operation": "create",
-          "description": "Add a small helper to build base-path aware URLs for static assets using the app’s configured base URL (e.g., import.meta.env.BASE_URL) so assets under frontend/public/assets/... resolve correctly across deployments."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Replace hard-coded absolute image paths with base-aware paths for: frontend/public/assets/generated/shop-board-logo.dim_512x512.png and frontend/public/assets/generated/shop-board-banner.dim_1600x600.png (and any other referenced generated assets). Ensure header logo, hero banner, and footer logo use the helper. Verify the component's usage instructions before implementing."
+          "description": "In the Hero section content block, insert a new text element immediately after the H1 \"Sheikh Mohammad Saad Document Center\" and before the existing subtitle paragraph. Render the welcome message exactly as provided, preserving line breaks/paragraphs (e.g., via a single string with newline characters and styling that respects them such as whitespace-pre-line). Keep the message centered and responsive with Tailwind classes consistent with the existing hero typography, and do not modify any other page content."
         }
       ]
     }
